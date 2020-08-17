@@ -60,12 +60,13 @@ end
 
 
 
-if position_taken?(board, index) == false && on_the_board?(index) == true
-  return true
+  if position_taken?(board, index) == false && on_the_board?(index) == true
+    return true
     
   else
-  return false
-  
+    return false
+    
+  end
 end
 
 
