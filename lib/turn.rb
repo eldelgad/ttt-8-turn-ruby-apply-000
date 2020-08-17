@@ -81,3 +81,23 @@ end
 #   ask for input again until you get a valid input
 # end
 
+def turn(board)
+  
+  puts "Please enter 1-9:"
+  
+  player_1 = gets.chomp
+  index = input_to_index(player_1)
+  
+    if valid_move?(board, index) == true
+      
+      move(board, index)
+      display_board(board)
+    
+    else
+      
+      puts "Please provide a Valid Input."
+      turn(board)
+      
+    end
+  end
+end
